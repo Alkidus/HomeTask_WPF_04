@@ -1,0 +1,109 @@
+﻿<Window x:Name="main" x:Class="Task_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task_01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel LastChildFill="False">
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar Band="1" BandIndex="1">
+                <Button x:Name="Bold" Height="30" FontWeight="Bold" FontSize="16" Click="Bold_Click">Bold</Button>
+                <Button x:Name="Italic" Height="30" FontSize="16" FontStyle="Italic" Click="Italic_Click">Italic</Button>
+                <Button x:Name="Underline" Height="30" FontSize="16" Click="Underline_Click">
+                    <Underline>Underline</Underline>
+                </Button>
+                <Button x:Name="Clear" Height="30" FontSize="16" Click="Clear_Click">Clear</Button>
+            </ToolBar>
+            <ToolBar Band="1" BandIndex="2">
+                <TextBlock FontSize="16" VerticalAlignment="Center">Font Size</TextBlock>
+                <ComboBox x:Name="fontSize" Height="30" Width="50" IsReadOnly="True" SelectionChanged="fontSize_SelectionChanged">
+                    <ComboBoxItem>8</ComboBoxItem>
+                    <ComboBoxItem>9</ComboBoxItem>
+                    <ComboBoxItem>10</ComboBoxItem>
+                    <ComboBoxItem>11</ComboBoxItem>
+                    <ComboBoxItem>12</ComboBoxItem>
+                    <ComboBoxItem>14</ComboBoxItem>
+                    <ComboBoxItem>16</ComboBoxItem>
+                    <ComboBoxItem>18</ComboBoxItem>
+                    <ComboBoxItem>20</ComboBoxItem>
+                    <ComboBoxItem>22</ComboBoxItem>
+                    <ComboBoxItem>24</ComboBoxItem>
+                    <ComboBoxItem>26</ComboBoxItem>
+                    <ComboBoxItem>28</ComboBoxItem>
+                    <ComboBoxItem>36</ComboBoxItem>
+                    <ComboBoxItem>48</ComboBoxItem>
+                </ComboBox>
+            </ToolBar>
+            <ToolBar Band="1" BandIndex="3">
+                <TextBlock FontSize="16" VerticalAlignment="Center">
+                    Color
+                </TextBlock>
+                <ComboBox x:Name="fontColor" Height="30" Width="100" IsReadOnly="True" SelectionChanged="fontColor_SelectionChanged">
+                    <ComboBoxItem Name="black">
+                        <StackPanel Orientation="Horizontal">
+                            <Border Background="Black" Height="20" Width="20" Margin="5,0,0,0"></Border>
+                            <TextBlock FontSize="16" Margin="15,0,0,0">Black</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem Name="blue">
+                        <StackPanel Orientation="Horizontal">
+                            <Border Background="Blue" Height="20" Width="20" Margin="5,0,0,0"></Border>
+                            <TextBlock FontSize="16" Margin="15,0,0,0">Blue</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem Name="green">
+                        <StackPanel Orientation="Horizontal">
+                            <Border Background="Green" Height="20" Width="20" Margin="5,0,0,0"></Border>
+                            <TextBlock FontSize="16" Margin="15,0,0,0">Green</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem Name="orange">
+                        <StackPanel Orientation="Horizontal">
+                            <Border Background="Orange" Height="20" Width="20" Margin="5,0,0,0"></Border>
+                            <TextBlock FontSize="16" Margin="15,0,0,0">Orange</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem Name="purple">
+                        <StackPanel Orientation="Horizontal">
+                            <Border Background="Purple" Height="20" Width="20" Margin="5,0,0,0"></Border>
+                            <TextBlock FontSize="16" Margin="15,0,0,0">Purple</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem Name="red">
+                        <StackPanel Orientation="Horizontal">
+                            <Border Background="Red" Height="20" Width="20" Margin="5,0,0,0"></Border>
+                            <TextBlock FontSize="16" Margin="15,0,0,0">Red</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem Name="yellow">
+                        <StackPanel Orientation="Horizontal">
+                            <Border Background="Yellow" Height="20" Width="20" Margin="5,0,0,0"></Border>
+                            <TextBlock FontSize="16" Margin="15,0,0,0">Yellow</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                </ComboBox>
+            </ToolBar>
+            <ToolBar Band="2">
+                <TextBlock Margin="5,0,0,0" VerticalAlignment="Center" FontSize="16">Start:</TextBlock>
+                <TextBox x:Name="start" Margin="5,0,0,0" Width="50" FontSize="16" TextChanged="start_TextChanged">0</TextBox>
+                <TextBlock Margin="5,0,0,0" VerticalAlignment="Center" FontSize="16">End:</TextBlock>
+                <TextBox x:Name="end" Margin="5,0,0,0" Width="50" FontSize="16" TextChanged="end_TextChanged">0</TextBox>
+            </ToolBar>
+        </ToolBarTray>
+        <TextBlock x:Name="text" FontSize="18" Margin="15" TextWrapping="Wrap">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur quod explicabo, possimus reprehenderit,
+            eveniet sunt asperiores dicta eligendi ducimus quae doloremque magnam necessitatibus nobis ipsa minus, assumenda ratione.
+            Voluptas earum ratione omnis blanditiis delectus. Amet cupiditate ex eum quasi porro pariatur! Facilis laboriosam porro eum 
+            nemo odit, molestias, quae perspiciatis in soluta qui maiores esse error officia doloribus necessitatibus dolorum perferendis
+            nisi minima. Voluptatibus, ipsum eum! Vel vero ratione illum autem saepe ducimus voluptatem ipsam cum eius magnam eos, adipisci
+            ut earum soluta nesciunt esse repudiandae maxime repellat mollitia ex. Eaque nesciunt, aspernatur excepturi deserunt a, rerum
+            vero sapiente neque dolores error in! Iusto quidem obcaecati corporis id, impedit quo dignissimos et ipsum dolorum laborum
+            repellendus consectetur autem veritatis? Aperiam, nemo quos! Sunt, illo facere magni pariatur aspernatur ipsa quisquam?
+            Ipsa, nostrum provident dolorem id soluta iusto eaque assumenda fuga nihil laborum quos illum itaque alias saepe necessitatibus
+            repellendus libero nam.
+        </TextBlock>
+    </DockPanel>
+
+</Window>
